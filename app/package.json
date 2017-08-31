@@ -11,6 +11,8 @@
     "massive": "^3.2.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.12"
   },
   "scripts": {
@@ -20,7 +22,7 @@
     "eject": "react-scripts eject"
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
-  "main": "index.js",
+  "main": "./src/server/server.js",
   "keywords": [],
   "author": "",
   "license": "ISC"
