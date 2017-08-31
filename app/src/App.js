@@ -16,7 +16,6 @@ class App extends Component {
 
   render () {
     return (
-      //Need routers
       <div>
         {router}
       </div>

@@ -1,20 +1,24 @@
-const express = require('express'),
-    bodyParser = require('body-parser');
-    cors = require('cors'),
-    massive = require('massive'),
-    config = require('../config');
-
+const express = require( 'express' );
+const bodyParser = require( 'body-parser' );
+const cors = require( 'cors' );
+const massive = require( 'massive' );
+const config = require( '../config' );
 const app = express();
+// const seed_file = require( '../DB/init/seed_file.sql' );
 
-app.use(bodyParser.json());
-app.use(cors());
+app.use( bodyParser.json() );
+app.use( cors() );
 
-massive(config.connectionString).then(db => {
-    app.set('db', db);
-})
+massive( config.connectionString ).then( DB => {
+    app.set( 'DB', DB );
+    app.get( 'DB' ).init.seed_file();
+} ).catch( err => { console.log( 'Connection Issue: ' + err ) } )
 
-
-
+app.get( '/api/getUserInfo/:id', ( request, response ) => {
+    request.app.get( 'DB' ).getAllFromUser( request.params.id ).then( data => {
+        console.log( data );
+    } )
+} )
 
 const port = 3030;
-app.listen(port, () => console.log('Reporting for duty on port ', port));
+app.listen( port, () => console.log( 'Reporting for duty on port ', port ) );
