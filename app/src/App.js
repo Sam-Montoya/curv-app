@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import router from './router';
 import Login from './components/Login';
+import SignUp from './components/SignUp';
 
 class App extends Component {
   constructor() {
@@ -11,11 +13,12 @@ class App extends Component {
 
     }
   }
+
   render () {
     return (
       //Need routers
       <div>
-        <Login />
+        {router}
       </div>
     );
   }
