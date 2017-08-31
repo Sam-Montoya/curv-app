@@ -1,3 +1,6 @@
+
+const axios = require( 'axios' );
+
 module.exports = {
     loginUser: ( userName, userPass ) => {
         console.log( 'username: ' + userName );
@@ -5,25 +8,17 @@ module.exports = {
     },
 
     createUser: ( name, userName, userEmail, userPass ) => {
-        if ( !name ) {
-            console.log( 'Empty Name' );
+        if ( !name || !userName || !userEmail || !userPass ) {
+            console.log( 'Empty Field' );
         } else {
-            console.log( 'name: ' + name );
-        }
-        if ( !userName ) {
-            console.log( 'Empty UserName' );
-        } else {
-            console.log( 'username: ' + userName );
-        }
-        if ( !userEmail ) {
-            console.log( 'Empty Email' );
-        } else {
-            console.log( 'user email: ' + userEmail );
-        }
-        if ( !userPass ) {
-            console.log( 'Empty Password' );
-        } else {
-            console.log( 'userpass: ' + userPass );
+            console.log( 'Creating user' );
+            let newUser = {
+                name: name,
+                userName: userName,
+                userEmail: userEmail,
+                userPass: userPass
+            }
+            axios.post( 'http://localhost:3030/api/createUser/', newUser ).then(( response ) => { console.log( response.data ) } ).catch( err => console.log( 'Could not create user' ) );
         }
     }
 }

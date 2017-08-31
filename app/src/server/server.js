@@ -20,5 +20,12 @@ app.get( '/api/getUserInfo/:username', ( request, response ) => {
     } )
 } )
 
+app.post( '/api/createUser/', ( request, response ) => {
+    let { name, userName, userEmail, userPass } = request.body;
+    request.app.get( 'DB' ).createUser( name, userName, userEmail, userPass ).then( data => {
+        response.status( 200 ).send( 'User has been created' );
+    } )
+} )
+
 const port = 3030;
 app.listen( port, () => console.log( 'Reporting for duty on port ', port ) );
