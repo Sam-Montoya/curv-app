@@ -14,9 +14,9 @@ massive( config.connectionString ).then( DB => {
     app.get( 'DB' ).init.seed_file();
 } ).catch( err => { console.log( 'Connection Issue: ' + err ) } )
 
-app.get( '/api/getUserInfo/:id', ( request, response ) => {
-    request.app.get( 'DB' ).getAllFromUser( request.params.id ).then( data => {
-        console.log( data );
+app.get( '/api/getUserInfo/:username', ( request, response ) => {
+    request.app.get( 'DB' ).getAllFromUser( request.params.username ).then( data => {
+        response.status( 200 ).send( data )
     } )
 } )
 

@@ -1,3 +1,5 @@
+DROP TABLE users;
+--Delete drop table after testing is done
 CREATE TABLE
 IF NOT EXISTS users
 (
