@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { createUser } from '../loginController';
+import './SignUp.css'
 
 export default class SignUp extends Component {
     constructor() {
@@ -46,15 +47,24 @@ export default class SignUp extends Component {
 
     render () {
         return (
-            <div>
-                <input type='text' placeholder='Name' onChange={( event ) => this.handleName( event.target.value )} />
-                <input type='text' placeholder='Username' onChange={( event ) => this.handleUserName( event.target.value )} />
-                <input type='text' placeholder='Email' onChange={( event ) => this.handleEmail( event.target.value )} />
-                <input type='text' placeholder='Password' onChange={( event ) => this.handleUserPassword( event.target.value )} />
-                <button onClick={() => createUser( this.state.name, this.state.userName, this.state.userEmail, this.state.password )}>Sign Up </button>
-                <Link to='/'>
-                    <button>Log In</button>
-                </Link>
+            <div className='signup_container'>
+                <div className='signupPagebuttons_container'>
+                    <Link to='/'>
+                        <button className='signupPage_login_button'>LOGIN</button>
+                    </Link>
+                    <Link to='/signup'>
+                        <button className='signupPage_button'>SIGN-UP</button>
+                    </Link>
+                </div>
+
+                <div className='signup_inputboxes'>
+                    <input type='text' placeholder='Name' onChange={( event ) => this.handleName( event.target.value )} />
+                    <input type='text' placeholder='Username' onChange={( event ) => this.handleUserName( event.target.value )} />
+                    <input type='text' placeholder='Email' onChange={( event ) => this.handleEmail( event.target.value )} />
+                    <input type='text' placeholder='Password' onChange={( event ) => this.handleUserPassword( event.target.value )} />
+                </div>
+
+                <button className='signup_buttonBottom' onClick={() => createUser( this.state.name, this.state.userName, this.state.userEmail, this.state.password )}>SIGN-UP</button>
             </div>
         )
     }

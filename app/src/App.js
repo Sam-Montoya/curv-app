@@ -16,8 +16,13 @@ class App extends Component {
 
   render () {
     return (
-      <div>
-        {router}
+      <div className='container'>
+        <section className='logo'>
+          <img className='logo' />
+        </section>
+        <div className='userInfo'>
+          {router}
+        </div>
       </div>
     );
   }

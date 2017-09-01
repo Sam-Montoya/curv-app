@@ -1,24 +1,14 @@
-.App {
-  text-align: center;
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('https://static.pexels.com/photos/313032/pexels-photo-313032.jpeg');
+    background-position-x: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.logo {
+  content: url('https://files.slack.com/files-tmb/T039C2PUY-F6WULNE3F-c91d97ef48/loggin_480.png');
+  margin-bottom: 50px;
 }

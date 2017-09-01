@@ -1,0 +1,97 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.signup_container {
+    height: 50vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.55);
+}
+.signupPagebuttons_container {
+    height: 50px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.signupPagebuttons_container button {
+    height: 100%;
+    width:50%;
+    color: white;
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    border-style: none;
+}
+.signupPage_login_button {
+    background-color: rgb(96, 160, 255);
+}
+.signupPage_button {
+     background-color: rgb(55, 65, 86);
+} 
+
+.signup_inputboxes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup_inputboxes input {
+    margin-top: 15px;
+    height: 45px;
+    width: 75%;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    font-size: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: darkgray;
+    padding-left: 50px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+}
+.signup_inputboxes input:focus {
+  width: 77%;
+}
+
+.signup_inputboxes input:nth-child(1) {
+    background: url('https://dqcgrsy5v35b9.cloudfront.net/cruiseplanner/assets/img/icons/login-w-icon.png') no-repeat left 10px center;    
+    background-size: 25px;
+    background-color: rgb(55, 65, 86);
+}
+
+.signup_inputboxes input:nth-child(2) {
+    background: url('https://dqcgrsy5v35b9.cloudfront.net/cruiseplanner/assets/img/icons/login-w-icon.png') no-repeat left 10px center;    
+    background-size: 25px;
+    background-color: rgb(55, 65, 86);
+}
+
+.signup_inputboxes input:nth-child(3) {
+    background: url('http://ianhucklesby.com/wp-content/uploads/2015/04/email-icon.png') no-repeat left 10px center;
+    background-size: 25px;
+    background-color: rgb(55, 65, 86);
+}
+
+.signup_inputboxes input:nth-child(4) {
+    background: url('https://www.crosoftware.net/CroSite/img/login/login.png') no-repeat left 10px center;
+    background-size: 25px;
+    background-color: rgb(55, 65, 86);
+}
+
+.signup_buttonBottom {
+    margin-top: 20px;
+    background-color: rgb(96, 160, 255);
+    height: 40px;
+    width: 55%;
+    color: white;
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    border-style: none;
+}
