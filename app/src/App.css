@@ -1,14 +1,89 @@
-.container{
+.container {
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('https://static.pexels.com/photos/313032/pexels-photo-313032.jpeg');
-    background-position-x: 50%;
+    /* background-position-x: 50%; */
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+.backgroundImage {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    -webkit-animation: blur 1.5s;
+    filter: brightness(80%);
+    filter: blur(3px);
+}
+
+@-webkit-keyframes blur {
+    0% {
+        -webkit-filter: blur(0px);
+    }
+    50% {
+      -webkit-filter: blur(0px);
+  }
+    100% {
+        -webkit-filter: blur(3px);
+    }
+}
+
 .logo {
-  content: url('https://files.slack.com/files-tmb/T039C2PUY-F6WULNE3F-c91d97ef48/loggin_480.png');
-  margin-bottom: 50px;
+    animation: logoFadeIn .8s ease-in;
+    content: url('../src/Loggin.png');
+    width: 420px;
+    height: 150px;
+    margin-bottom: 5vh;
+    margin-top: -5vh;
+}
+
+.userInfo {
+    animation: loginPopUp 1.5s ease-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes logoFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes loginPopUp {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1.0005);
+    }
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.container backgroun {
+    width: 40px;
+}
+
+@keyframes backgroundBlur {
+    0% {
+        filter: blur(0px);
+    }
+    100% {
+        filter: blur(2px);
+    }
 }

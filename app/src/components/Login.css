@@ -6,7 +6,7 @@ html {
 }
 
 .login_container {
-    height: 50vh;
+    height: 380px;
     width: 30vw;
     display: flex;
     flex-direction: column;
@@ -26,6 +26,7 @@ html {
     font-size: 18px;
     font-family: 'Raleway', sans-serif;
     border-style: none;
+    transition: all 0.3s;
 }
 .login_button {
     background-color: rgb(55, 65, 86);
@@ -39,6 +40,7 @@ html {
     font-size: 18px;
     font-family: 'Raleway', sans-serif;
     border-style: none;
+    transition: all 0.3s;
 }
 .signup_button {
     background-color: rgb(96, 160, 255);
@@ -62,9 +64,7 @@ html {
     border-width: 2px;
     border-color: darkgray;
     padding-left: 50px;
-    -webkit-transition: all .5s;
-    -moz-transition: all .5s;
-    transition: all .5s;
+    transition: all 0.5s;
 }
 
 .login_inputboxes input:nth-child(1) {
@@ -79,11 +79,21 @@ html {
     background-color: rgb(55, 65, 86);
 }
 
+
+.loginPagebutton_container button:hover {
+    font-size: 20px;
+}
+
 .login_inputboxes input:focus {
   width: 80%;
 }
 
 .login_container h5 {
     color: rgb(55, 65, 86);
+}
+
+.login_buttonBottom:hover {
+    width: 75%;
+    font-size: 20px;
 }
 
